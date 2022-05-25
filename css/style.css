@@ -1,0 +1,605 @@
+/****************** RESET CSS ********************/
+* { margin: 0; padding: 0; }
+a { text-decoration: none; color: #fff; }
+li { list-style: none; }
+img { border: 0; }
+
+body {
+	background-color: #000;
+	font-family: 'NanumGothic', sans-serif;
+}
+
+/****************** animation ********************/
+@keyframes updown {
+	0% { bottom: 30px; }
+	100% { bottom: 15px; }
+}
+
+
+/****************** nav ********************/
+nav {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	display: none;
+}
+
+nav ul {
+	width: 1300px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+nav li {
+	float: left;
+	height: 100px;
+	margin-top: -100px;
+	margin-right: 76px;
+}
+
+nav img {
+	width: 100%;
+	margin-top: 35px;
+}
+
+nav li:first-child { width: 80px; margin-left: 38px;}
+nav li:last-child { margin-right: 38px;}
+nav li:first-child img { margin-top: 20px; }
+
+nav li a:last-child { display: none; }
+
+nav li.on a:first-child { display: none; }
+nav li.on a:last-child { display: block; }
+
+/****************** sec ********************/
+.sec { 
+	width: 100%; 
+	position: relative;
+	overflow: hidden;
+}
+
+
+/****************** header ********************/
+header {
+	background-image: url(../images/main/main.jpg);
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+header p {
+	width: 30px;
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	margin-left: -15px;
+	cursor: pointer;
+	animation: updown 0.7s ease infinite alternate;
+}
+
+header p img { width: 100%; }
+
+
+
+/****************** about ********************/
+#about video {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+	#about_show {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+		#about_show> img {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 100%;
+			min-width: 1900px;
+			margin-top: -50px;
+			margin-left: -950px;
+		}
+
+		#about_black { 
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(32, 34, 26, 0.7);
+			top: 0;
+			left: 0;
+		}
+
+		#about_play {
+			width: 80px;
+			height: 80px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -40px;
+			margin-left: -40px;
+			opacity: 0.6;
+			cursor: pointer;
+		}
+
+		#about_play img { width: 100%; }
+
+		#about_txt {
+			width: 1200px;
+			position: absolute;
+			bottom: 8%;
+			left: 50%;
+			margin-left: -600px;
+			color: #fff;
+		}
+
+		#about_txt h2 {
+			font-size: 2em;
+			margin-bottom: 5px;
+			text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+		}
+
+		#about_txt p {
+			line-height: 26px;
+			font-size: 0.95em;
+			text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+		}
+
+
+
+/****************** character ********************/
+	
+#char {
+	width: 100%;
+	height: 10%;
+	background-color: #ffcb4e;
+
+}
+
+	.char {
+		width: 1300px;
+		height: 100%;
+		left: 50%;
+		margin-left: -650px;
+		position: absolute;
+		display: none;
+	}
+
+	.char.on { display: block; }
+
+	.char img { position: absolute; }
+
+	.char img:first-child { top: 15%;}
+	.charl img:first-child { left: 20px; }
+	.charr img:first-child { right: 20px; }
+
+	.char img:nth-child(2) { top: 5%; width: 800px; }
+	.charl img:nth-child(2) { left: 50px; }
+	.charr img:nth-child(2) { right: 50px; }
+
+	.char img:nth-child(3) { top: 30%; }
+	.charl img:nth-child(3) { right: 50px; }
+	.charr img:nth-child(3) { left: 50px; }
+
+	.char p {
+		position: absolute;
+		width: 500px;
+		color: #fff;
+		top: 30%;
+		margin-top: 200px;
+		text-align: center;
+		line-height: 24px;
+	}
+
+	.charl p { right: 100px; }
+	.charr p { left: 100px; }
+
+	#char_btn {
+		width: 720px;
+		position: absolute;
+		bottom: 5%;
+		left: 50%;
+		margin-left: -360px;
+	}
+
+	#char_btn li {
+		text-align: center;
+		display: inline-block;
+		cursor: pointer;
+		margin-right: 40px;
+		transform: scale(0.9);
+		transition-duration: 0.3s;
+	}
+
+	#char_btn li.on { transform: scale(1.2); }
+
+	#char_btn li p {
+		color: #fff;
+		font-size: 1em;
+		text-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+	}
+
+	#char_btn li:last-child { margin-right: 0; }
+
+
+	/*hover*/
+	#char_btn li:hover { transform: scale(1.2); }
+
+
+
+/****************** island ********************/
+#island {
+	background-image: url(../images/island/islandbg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#island_btn {
+	width: 1300px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+#island_btn p {
+	width: 320px;
+	height: 420px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition-duration: 0.3s;
+}
+
+/*#island_btn p { margin-top: -210px; margin-left: -160px; }*/
+#island_btn p:nth-child(1) { margin-top: -160px; margin-left: -740px; }
+#island_btn p:nth-child(2) { margin-top: -380px; margin-left: -450px; }
+#island_btn p:nth-child(3) { margin-top: -310px; margin-left: -140px; }
+#island_btn p:nth-child(4) { margin-top: -270px; margin-left: 180px; }
+#island_btn p:nth-child(5) { margin-top: -30px; margin-left: 400px; }
+
+#island_btn img { width: 100%; cursor: pointer; }
+
+/*hover*/
+#island_btn p:hover {
+	transform: scale(1.25);
+}
+
+/****************** popup ********************/
+#pop {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 300;
+	display: none;
+}
+
+	#pop_lilac {
+		width: 100%;
+		height: 100%;
+		background-color: rgba(203, 196, 254, 0.9);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#pop_close {
+		position: absolute;
+		width: 1300px;
+		height: 35px;
+		top: 5%;
+		left: 50%;
+		margin-left: -650px;
+		z-index: 500;
+	}
+
+	#pop_close img {
+		height: 100%;
+		float: right;
+		cursor: pointer;
+	}
+
+	.pop {
+		width: 1300px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -650px;
+		display: none;
+	}
+
+	.pop> p { 
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 400px; 
+		height: 520px;
+	}
+
+	.pop> p> img { width: 100%; }
+
+	.pop01> p { margin-top: -210px; margin-left: -780px; }        
+	.pop02> p { margin-top: -430px; margin-left: -490px; }        
+	.pop03> p { margin-top: -360px; margin-left: -180px; }        
+	.pop04> p { margin-top: -320px; margin-left: 140px; }        
+	.pop05> p { margin-top: -80px; margin-left: 360px; }        
+
+
+
+		.album {
+			position: absolute;
+			top: 50%;
+			left: 45%;
+			opacity: 0;
+		}
+
+		.album p {
+			width: 400px;
+			height: 225px;
+			border-radius: 10px;
+			overflow: hidden;
+			margin-right: 40px;
+			margin-bottom: 30px;
+			float: left;
+			box-shadow: 0 0  15px rgba(251, 247, 193, 0.9);
+		}
+
+		.album p img { width: 100%; }
+
+
+		.a01 {
+			width: 880px;
+			margin-top: -230px;
+			margin-left: -300px;
+		}
+
+		.a01 p:nth-child(3) { margin-left: 220px; }
+
+		.a02 {
+			width: 1320px;
+			margin-top: 80px;
+			margin-left: -640px;
+		}
+
+		.a03 { 
+			width: 440px;
+			margin-top: -370px;
+			margin-left: -600px;
+		}
+
+		.a04 {
+			width: 440px;
+			margin-top: -370px;
+			margin-left: -350px;
+		}
+
+		.a05 {
+			width: 880px;
+			margin-top: -200px;
+			margin-left: -550px;
+		}
+
+		.a05 p:nth-child(3) { margin-left: 300px; }
+
+
+	
+
+/****************** gallery ********************/
+	#gall_img {
+		width: 100%;
+		position: absolute;
+	}
+
+	#gall_img img {
+		position: absolute;
+		width: 100%;
+		min-width: 1900px;
+		opacity: 0;
+		transition-duration: 0.3s;
+	}
+
+	#gall_img img.on { opacity: 1; }
+
+	#gall_thum {
+		position: absolute;
+		bottom: 3%;
+		left: 50%;
+		margin-left: -600px;
+		width: 1200px;
+	}
+
+		#gall_btn {
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			margin-top: -20px;
+		}
+
+		#gall_btn img {
+			width: 40px;
+			cursor: pointer;
+		}
+
+		#gall_btn img:first-child { float: left; }
+		#gall_btn img:last-child { float: right; }
+
+		#gall_mask {
+			width: 1000px;
+			height: 140px;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+		}
+
+			#gall_wrap { width: 1500px; }
+
+			#gall_wrap p {
+				width: 250px;
+				float: left;
+				cursor: pointer;
+			}
+
+			#gall_wrap p img { width: 100%; }
+
+
+
+/****************** others ********************/
+	#etc_content {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+
+		.con {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			display: none;
+			opacity: 0;
+			transition-duration: 1s;
+		}
+
+		.con.on {
+			display: block;
+			opacity: 1;
+		}
+
+		.con img {
+			position: absolute;
+			left: 50%;
+			margin-left: -950px;
+			width: 100%;
+			min-width: 1900px;
+		}
+
+		.con04 img { height: 100%; }
+
+		.con_black {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+
+		.con_txt {
+			width: 500px;
+			top: 20%;
+			left: 50%;
+			margin-left: -620px;
+			position: absolute;
+			color: #fff;
+		}
+
+		.con_txt h2 {
+			font-size: 2em;
+			margin-bottom: 5px;
+			text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+		}
+
+		.con_txt p {
+			line-height: 26px;
+			font-size: 0.95em;
+			text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+		}
+
+	#youtube {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 50%;
+		height: 100%;
+	}
+
+	#youtube iframe {
+		position: absolute;
+		top: 20%;
+		width: 640px;
+		height: 400px;
+	}
+
+	#etc_btn {
+		position: absolute;
+		bottom: 80px;
+		left: 50%;
+		margin-left: -460px;
+		width: 920px;
+	}
+
+	#etc_btn p {
+		width: 80px;
+		height: 80px;
+		border-radius: 40px;
+		float: left;
+		overflow: hidden;
+		margin-right: 60px;
+		cursor: pointer;
+	}
+
+	#etc_btn p:last-child { margin-right: 0; }
+	#etc_btn img{ width: 101%; }
+
+	#etc_btn p.on {
+		border: 3px solid #fff;
+		box-sizing: border-box;
+	}
+
+	footer {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: -650px;
+		width: 1300px;
+		border-top: 2px solid rgba(255, 255, 255, 0.5);
+		overflow: hidden;
+	}
+
+	footer div {
+		width: 10%;
+		height: 50px;
+		float: left;
+	}
+
+	footer div img {
+		margin: 5%;
+		height: 90%;
+	}
+
+	footer p {
+		width: 90%;
+		height: 60px;
+		line-height: 60px;
+		color: #fff;
+		float: left;
+		font-size: 0.8em;
+	}
+
+	footer ul {
+		position: absolute;
+		float: left;
+		top: 8px;
+		right: 5px;
+	}
+
+	footer ul li {
+		height: 40px;
+		display: inline-block;
+	}
+
+	footer ul li img { 
+		height: 70%; 
+		margin: 3px 4px;
+	}
+
+	footer ul li:nth-child(2) img, footer ul li:nth-child(5) img { height: 80%; }
